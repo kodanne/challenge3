@@ -1,7 +1,7 @@
 body{
     background-color: lavender;
 }
-#main{
+#body-main{
     max-width: 1000px !important;
     margin: auto;
 }
@@ -11,8 +11,8 @@ body{
     background: url(/images/bg-sidebar-desktop.svg)no-repeat bottom ;
     
 }
-#add-main{
-     
+#confirm{
+    max-width: 300px;
 }
 @media screen and (max-width:768px) {
     #v-pills-tab{
@@ -20,15 +20,15 @@ body{
         width: 400px;
         padding: 50px 70px !important;
     }
-    #main{
+    #body-main{
         background-color: lavender !important;
         margin: 0 auto !important;
     }
     #v-pills-tabContent{
-        position: absolute;
-        max-width: 300px;
+        position: relative;
+        max-width: 350px;
         background: white;
-        bottom: 70px;
+        bottom: 40px;
         border-radius: 2%;
     }
     .card{

@@ -12,36 +12,38 @@
 
 <body>
 
-    <div class="bg-white mt-5 p-2 d-flex flex-column flex-md-row align-items-center align-items-md-start justify-content-center rounded-3 " id="main">
-        <ul class="nav nav-pills d-flex flex-row flex-md-column" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+    <div class="bg-white mt-5 p-2 d-flex flex-column flex-md-row align-items-center align-items-md-start justify-content-center rounded-3 "
+        id="body-main">
+        <ul class="nav nav-pills d-flex flex-row flex-md-column" id="v-pills-tab" role="tablist"
+            aria-orientation="vertical">
             <li class="nav-item active row text-uppercase align-items-center text-white" role="presentation">
-                <button class="nav-link text-white border rounded-circle py-2 px-3 col-3 mx-3 mx-md-0" id="v-pills-home-tab"
-                    data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab"
+                <button class="nav-link active text-white border rounded-circle py-2 px-3 col-3 mx-3 mx-md-0"
+                    id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab"
                     aria-controls="v-pills-home" aria-selected="true">1</button>
                 <p class="col d-none d-md-block">
                     <span class="d-block">step 1</span> Your info
                 </p>
             </li>
             <li class="nav-item row text-uppercase align-items-center text-white" role="presentation">
-                <button class="nav-link text-white border rounded-circle py-2 px-3 col-3 mx-3 mx-md-0" id="v-pills-plan-tab"
-                    data-bs-toggle="pill" data-bs-target="#v-pills-plan" type="button" role="tab"
+                <button class="nav-link text-white border rounded-circle py-2 px-3 col-3 mx-3 mx-md-0"
+                    id="v-pills-plan-tab" data-bs-toggle="pill" data-bs-target="#v-pills-plan" type="button" role="tab"
                     aria-controls="v-pills-plan" aria-selected="false">2</button>
                 <p class="col d-none d-md-block">
                     <span class="d-block">step 2</span>select your plan
                 </p>
             </li>
             <li class="nav-item row text-uppercase align-items-center text-white" role="presentation">
-                <button class="nav-link text-white border rounded-circle py-2 px-3 col-3 mx-3 mx-md-0" id="v-pills-add-tab"
-                    data-bs-toggle="pill" data-bs-target="#v-pills-add" type="button" role="tab"
+                <button class="nav-link text-white border rounded-circle py-2 px-3 col-3 mx-3 mx-md-0"
+                    id="v-pills-add-tab" data-bs-toggle="pill" data-bs-target="#v-pills-add" type="button" role="tab"
                     aria-controls="v-pills-add" aria-selected="false">3</button>
                 <p class="col d-none d-md-block">
                     <span class="d-block">step 3</span> Add-ons
                 </p>
             </li>
             <li class="nav-item row text-uppercase align-items-center text-white" role="presentation">
-                <button class="nav-link text-white border rounded-circle py-2 px-3 col-3 mx-3 mx-md-0" id="v-pills-summary-tab"
-                    data-bs-toggle="pill" data-bs-target="#v-pills-summary" type="button" role="tab"
-                    aria-controls="v-pills-summary" aria-selected="false">4</button>
+                <button class="nav-link text-white border rounded-circle py-2 px-3 col-3 mx-3 mx-md-0"
+                    id="v-pills-summary-tab" data-bs-toggle="pill" data-bs-target="#v-pills-summary" type="button"
+                    role="tab" aria-controls="v-pills-summary" aria-selected="false">4</button>
                 <p class="col d-none d-md-block">
                     <span class="d-block">step 4</span> Summary
                 </p>
@@ -52,7 +54,8 @@
         <!-- tables contents -->
 
         <div class="px-5 tab-content " id="v-pills-tabContent">
-            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
+            <div class="tab-pane fade show active main p-3" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab"
+                tabindex="0">
                 <h1>Personal info</h1>
                 <p>Please provide your name, email address, and phone number.</p>
                 <form>
@@ -63,98 +66,163 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label fw-bold">Email address</label>
+                        <small id="semail" class="float end"></small>
                         <input type="email" class="form-control" placeholder="e.g.stephenking@lorem.com" id="email">
-                        <small id="semail"></small>
+
                     </div>
                     <div class="mb-3 ">
                         <label class="form-label fw-bold">Phone Number</label>
-                        <input type="tel" class="form-control" placeholder="e.g.+1 234 567 890" id="number">
                         <small id="stel"></small>
+                        <input type="tel" class="form-control" placeholder="e.g.+1 234 567 890" id="number">
+
                     </div>
-                    <button type="submit" class="btn btn-primary float-end mt-5" onclick="Next()">Next Step</button>
+                    <button class="btn btn-primary float-end my-3" onclick="NextHome()">Next Step</button>
                 </form>
             </div>
-            <div class="tab-pane fade" id="v-pills-plan" role="tabpanel" aria-labelledby="v-pills-plan-tab" tabindex="0">
-                <h1 class="my-2">Select your plan</h1>
-                <p class="mb-3">you have the option of monthly or yearly</p>
-                <div class="my-5">
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
-                        <div class="col">
-                            <div class="card">
-                                <img src="images/icon-arcade.svg" class="card-img-top w-25 m-2" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Arcarde</h5>
-                                    <p class="card-text">$9/mo</p>
+            <div class="tab-pane fade main p-3" id="v-pills-plan" role="tabpanel" aria-labelledby="v-pills-plan-tab"
+                tabindex="0">
+                <div id="pills-tabContent" class="tab-content">
+                    <div class="tab-pane fade show active" id="pills-month" role="tabpanel" aria-labelledby="pills-month-tab"
+                        tabindex="0">
+                        <h1 class="my-2">Select your plan</h1>
+                        <p class="mb-3">you have the option of monthly or yearly</p>
+                        <div class="my-5">
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <img src="images/icon-arcade.svg" class="card-img-top w-25 m-2" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold ">Arcarde</h5>
+                                            <p class="card-text">$9/mo</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <img src="images/icon-advanced.svg" class="card-img-top w-25 m-2" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">Advanced</h5>
+                                            <p class="card-text">$12/mo</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <img src="images/icon-pro.svg" class="card-img-top img-fluid w-25 m-2"
+                                            alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">Pro</h5>
+                                            <p class="card-text">$15/mo</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col">
-                            <div class="card">
-                                <img src="images/icon-advanced.svg" class="card-img-top w-25 m-2" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Advanced</h5>
-                                    <p class="card-text">$12/mo</p>
+                    </div>
+                    <div class="tab-pane fade" id="pills-year" role="tabpanel" aria-labelledby="pills-year-tab"
+                        tabindex="0">
+                        <h1 class="my-2">Select your plan</h1>
+                        <p class="mb-3">you have the option of monthly or yearly</p>
+                        <div class="my-5">
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <img src="images/icon-arcade.svg" class="card-img-top w-25 m-2" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold ">Arcarde</h5>
+                                            <p class="card-text">$90/yr</p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <img src="images/icon-pro.svg" class="card-img-top img-fluid w-25 m-2" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Pro</h5>
-                                    <p class="card-text">$15/mo</p>
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <img src="images/icon-advanced.svg" class="card-img-top w-25 m-2" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">Advanced</h5>
+                                            <p class="card-text">$120/yr</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <img src="images/icon-pro.svg" class="card-img-top img-fluid w-25 m-2"
+                                            alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title fw-bold">Pro</h5>
+                                            <p class="card-text">$150/yr</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div>
-                        monthly yearly
+                        <ul class="nav nav-pills d-flex " id="pills-tab" role="tablist">
+                            <li class="nav-item active" role="presentation">
+                                <button class="nav-link active btn"
+                                    id="pills-month-tab" data-bs-toggle="pill" data-bs-target="#pills-month"
+                                    type="button" role="tab" aria-controls="pills-month"
+                                    aria-selected="true">monthly</button>
+                                </p>
+                            </li>
+                            <li class="nav-item " role="presentation">
+                                <button class="nav-link btn"
+                                    id="pills-year-tab" data-bs-toggle="pill" data-bs-target="#pills-year" type="button"
+                                    role="tab" aria-controls="pills-year" aria-selected="false">yearly</button>
+                                </p>
+                            </li>
+
+                        </ul>
+
                     </div>
-                    <button type="submit" class="btn btn-transparent text-primary float-start mt-5" onclick="go()">go
+                    <button type="submit" class="btn btn-transparent text-primary float-start mt-5" onclick="Prev()">go
                         back</button>
-                    <button type="submit" class="btn btn-primary float-end mt-5" onclick="Next()">Next Step</button>
+                    <button type="submit" class="btn btn-primary float-end my-3" onclick="Next()">Next Step</button>
                 </div>
             </div>
-            <div class="tab-pane" id="v-pills-add" role="tabpanel" aria-labelledby="v-pills-add-tab" tabindex="0">
+            <div class="tab-pane fade main p-3" id="v-pills-add" role="tabpanel" aria-labelledby="v-pills-add-tab" tabindex="0">
                 <h1 class="">Pick add-ons</h1>
                 <p class="mb-3">Add-ons help enhance your gaming experience</p>
                 <div class="my-3" id="add-main">
-                    <div class="bg-primary-subtle p-4 border border-primary my-2 row">
-                        <form class="row col-7">
+                    <div
+                        class="bg-primary-subtle p-3 border border-primary my-2 d-flex justify-content-between align-items-center">
+                        <form class="row ">
                             <input type="checkbox" name="" id="" class="col-1">
-                            <label for="" class="col">Online service <span class="d-block">Access to ultiplayer
+                            <label for="" class="col-11">Online service <span class="d-block">Access to ultiplayer
                                     games</span></label>
                         </form>
-                        <span class="col offset-3">+$1/mo</span>
+                        <span class="">+$1/mo</span>
                     </div>
-                    <div class="bg-primary-subtle p-4 border border-primary my-2 row">
-                        <form class="row col-7">
+                    <div
+                        class="bg-primary-subtle p-3 border border-primary my-2 d-flex justify-content-between align-items-center">
+                        <form class="row ">
                             <input type="checkbox" name="" id="" class="col-1">
-                            <label for="" class="col">Larger storage<span class="d-block">Extra 1TB of cloud
+                            <label for="" class="col-11">Larger storage<span class="d-block">Extra 1TB of cloud
                                     save</span></label>
                         </form>
-                        <span class="col offset-3">+$2/mo</span>
+                        <span class="">+$2/mo</span>
                     </div>
-                    <div class="bg-primary-subtle p-4 border border-primary my-2 row">
-                        <form action="" class="row col-7">
-                            <input type="checkbox" name="" id="" class="col">
+                    <div
+                        class="bg-primary-subtle p-3 border border-primary my-2 d-flex justify-content-between align-items-center">
+                        <form action="" class="row">
+                            <input type="checkbox" name="" id="" class="col-1">
                             <label for="" class="col-11">Customizable Profile<span class="d-block">Custom theme on yur
                                     profile</span></label>
                         </form>
-                        <span class="col offset-3">+$2/mo</span>
+                        <span class="">+$2/mo</span>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-transparent text-primary float-start mt-3" onclick="go()">go
+                <button type="submit" class="btn btn-transparent text-primary float-start mt-3" onclick="Prev()">go
                     back</button>
-                <button type="submit" class="btn btn-primary float-end mt-3" onclick="Next()">Next Step</button>
+                <button type="submit" class="btn btn-primary float-end my-3" onclick="Next()">Next Step</button>
             </div>
-            <div class="tab-pane fade" id="v-pills-summary" role="tabpanel" aria-labelledby="v-pills-summary-tab"
+            <div class="tab-pane fade main p-3" id="v-pills-summary" role="tabpanel" aria-labelledby="v-pills-summary-tab"
                 tabindex="0">
                 <h1>Finishing up</h1>
                 <p>Double-check everythinf looks OK before confirming</p>
                 <div class="my-3" id="add-main">
                     <div class="bg-primary-subtle p-4 border border-primary my-2 row">
-                        <div class="d-flex justify-content-between align-items-center" >
+                        <div class="d-flex justify-content-between align-items-center">
                             <p class="fw-bold">Arcade (Monthly) <a class="d-block fw-light">Change</a></p>
                             <span class="">+9/mo</span>
                         </div>
@@ -168,14 +236,16 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-transparent text-primary float-start mt-3" onclick="go()">go
+                <button type="submit" class="btn btn-transparent text-primary float-start mt-3" onclick="Prev()">go
                     back</button>
-                <button type="submit" class="btn btn-primary float-end mt-3" onclick="Next()">Confirm</button>
+                <button type="submit" class="btn btn-primary float-end my-3" onclick="Confirm()">Confirm</button>
             </div>
-            <div class="d-none">
-                <img src="images/icon-thank-you.svg" alt="">
-                <h1>Thanks you</h1>
-            </div>
+        </div>
+        <div class="d-none bg-white" id="confirm">
+            <img src="images/icon-thank-you.svg" alt="">
+            <h1>Thanks you</h1>
+            <p>Thanks for confirming your subscription! We hope you have fun using plateform. If you ever need support,
+                please feel free to email us at support@loremgaming.com.</p>
         </div>
 
 
