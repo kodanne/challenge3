@@ -1,0 +1,42 @@
+body{
+    background-color: lavender;
+}
+#main{
+    max-width: 1000px !important;
+    margin: auto;
+}
+#v-pills-tab{
+    height: 100% !important;
+    padding: 10px 100px 100px 100px !important;
+    background: url(/images/bg-sidebar-desktop.svg)no-repeat bottom ;
+    
+}
+#add-main{
+     
+}
+@media screen and (max-width:768px) {
+    #v-pills-tab{
+        background: url(/images/bg-sidebar-mobile.svg)no-repeat bottom !important;
+        width: 400px;
+        padding: 50px 70px !important;
+    }
+    #main{
+        background-color: lavender !important;
+        margin: 0 auto !important;
+    }
+    #v-pills-tabContent{
+        position: absolute;
+        max-width: 300px;
+        background: white;
+        bottom: 70px;
+        border-radius: 2%;
+    }
+    .card{
+        display: flex !important;
+        flex-direction: row !important;
+    }
+    #add-main .border{
+        display: flex !important;
+        flex-direction:column !important;
+    }
+}
