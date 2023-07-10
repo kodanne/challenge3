@@ -8,7 +8,7 @@ body{
 #v-pills-tab{
     height: 100% !important;
     padding: 10px 100px 100px 100px !important;
-    background: url(/images/bg-sidebar-desktop.svg)no-repeat bottom ;
+    background: url(images/bg-sidebar-desktop.svg)no-repeat bottom ;
     
 }
 #confirm{
@@ -16,7 +16,7 @@ body{
 }
 @media screen and (max-width:768px) {
     #v-pills-tab{
-        background: url(/images/bg-sidebar-mobile.svg)no-repeat bottom !important;
+        background: url(images/bg-sidebar-mobile.svg)no-repeat bottom !important;
         width: 400px;
         padding: 50px 70px !important;
     }
